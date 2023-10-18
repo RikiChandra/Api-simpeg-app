@@ -68,11 +68,11 @@ router.post('/login', async (req, res) => {
     const user = await User.findOne({
         username: req.body.username
     })
-    if (!user) return res.status(200).json(result(0, 'Your username is not registered!'))
+    if (!user) return res.status(400).json(result(0, 'Your username is not registered!'))
 
     // check password
     const validPwd = await bcrypt.compare(req.body.password, user.password)
-    if (!validPwd) return res.status(200).json(result(0, 'Your password is wrong!'))
+    if (!validPwd) return res.status(400).json(result(0, 'Your password is wrong!'))
 
     return res.status(200).json(result(1, 'Login User Succes!', user))
 })
