@@ -19,7 +19,7 @@ app.use('/auth', authRoutes)
 app.use('/post', postRoutes)
 
 app.get('/', (req, res) => {
-    res.send('WELCOME TO I-LAUNDRY API')
+    res.send('WELCOME TO SIMPEG API')
 })
 
 mongoose.connect(process.env.DB_CONNECTION, {

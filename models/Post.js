@@ -5,22 +5,6 @@ const postSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    nomor_hp: {
-        type: String,
-        required: true
-    },
-    jenis_barang: {
-        type: String,
-        required: true
-    },
-    jumlah_barang: {
-        type: String,
-        required: true
-    },
-    harga: {
-        type: String,
-        required: true
-    },
     user_id: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',

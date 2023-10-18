@@ -73,10 +73,6 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
     const inputPost = new Post({
         nama: req.body.nama,
-        nomor_hp: req.body.nomor_hp,
-        jenis_barang: req.body.jenis_barang,
-        jumlah_barang: req.body.jumlah_barang,
-        harga: req.body.harga,
         user_id: req.body.user_id
     })
 
@@ -93,10 +89,6 @@ router.put('/', async (req, res) => {
     const data = {
         id: req.body.id,
         nama: req.body.nama,
-        nomor_hp: req.body.nomor_hp,
-        jenis_barang: req.body.jenis_barang,
-        jumlah_barang: req.body.jumlah_barang,
-        harga: req.body.harga
     }
 
     try {
