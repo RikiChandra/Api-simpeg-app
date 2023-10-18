@@ -45,7 +45,8 @@ router.post('/register', async (req, res) => {
 
     const user = new User({
         username: req.body.username,
-        password: hashPassword
+        password: hashPassword,
+        role: req.body.role
     })
 
     try {
